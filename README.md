@@ -195,8 +195,6 @@ Why that mattered:
 
 ## Evidence (screenshots)
 
-> These images are currently linked from my working notes. For GitHub, move them into your repo (e.g., `assets/screenshots/`) and replace the links with relative paths like `![](assets/screenshots/yourfile.png)`.
-
 ![](file://%7B%22source%22%3A%22attachment%3Ad1e28fb0-0a42-4cf1-959a-0373e302be3b%3AScreenshot_2026-06-25_151931.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%22c4049353-a3dc-482e-8759-cfdceb78ff02%22%2C%22spaceId%22%3A%22300e4c7e-c47f-810a-9f17-0003a2002d92%22%7D%7D)
 ![](file://%7B%22source%22%3A%22attachment%3A85fd2130-eace-4901-9713-849cdca541ba%3AScreenshot_2026-07-09_104554.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%222112d594-e772-41e1-8c4c-4b6d206a64a6%22%2C%22spaceId%22%3A%22300e4c7e-c47f-810a-9f17-0003a2002d92%22%7D%7D)
 ![](file://%7B%22source%22%3A%22attachment%3Af8fde60f-c153-4679-919f-924721b0c1ab%3AScreenshot_2026-07-09_104553.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%22389c27e0-6dfb-4215-b730-39380e389075%22%2C%22spaceId%22%3A%22300e4c7e-c47f-810a-9f17-0003a2002d92%22%7D%7D)
@@ -240,13 +238,6 @@ Why that mattered:
 
 ---
 
-## Documentation deliverables checklist
-
-- [ ] Finalise design documentation, security-configuration docs, and administrative runbooks  
-- [ ] Produce the final project report with framework mapping and future-expansion recommendations  
-- [ ] Submit your documentation, powerpoint slides and github link to your automation for review by your team lead  
-- [ ] Conduct internal lessons-learnt and update the knowledge base  
 
 ---
 
-## Repo structure (if publishing on GitHub Pages)
