@@ -1,0 +1,128 @@
+[2026-07-09 10:44:22] INFO: Starting Standardized License Governance Automation Pipeline ---
+[2026-07-09 10:44:22] INFO: Analyzing tenant commercial license inventory pools...
+[2026-07-09 10:44:23] INFO: Request URL: 'https://login.microsoftonline.com/2cb512d3-d3eb-4c6e-ad01-b5ba7935bd85/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.12.4 (Windows-11-10.0.26200-SP0)'
+No body was attached to the request
+[2026-07-09 10:44:24] INFO: Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'c2618c05-0f3b-4162-a317-0dddfdbc8700'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 09 Jul 2026 09:44:24 GMT'
+    'Content-Length': '1964'
+[2026-07-09 10:44:24] INFO: Request URL: 'https://login.microsoftonline.com/2cb512d3-d3eb-4c6e-ad01-b5ba7935bd85/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/x-www-form-urlencoded'
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.12.4 (Windows-11-10.0.26200-SP0)'
+A body is sent with the request
+[2026-07-09 10:44:25] INFO: Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'x-ms-clientdata': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'b5f5d780-fa18-4cd7-a012-6849eeee6900'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 09 Jul 2026 09:44:24 GMT'
+    'Content-Length': '2298'
+[2026-07-09 10:44:25] INFO: ClientSecretCredential.get_token succeeded
+[2026-07-09 10:44:27] INFO: HTTP Request: GET https://graph.microsoft.com/v1.0//subscribedSkus "HTTP/1.1 200 OK"
+[2026-07-09 10:44:28] INFO: SUCCESS: Exported overall balances to 'license_inventory_summary.csv'
+[2026-07-09 10:44:28] INFO: Scanning all directory accounts for active seat usage metrics...
+[2026-07-09 10:44:28] ERROR: FAILED to process user licensing records: 'function' object has no attribute 'headers'
+[2026-07-09 10:44:28] INFO: License Governance Pipeline Execution Completed.
+[2026-07-09 10:47:36] INFO: Starting Standardized License Governance Automation Pipeline ---
+[2026-07-09 10:47:36] INFO: Analyzing tenant commercial license inventory pools...
+[2026-07-09 10:47:36] INFO: Request URL: 'https://login.microsoftonline.com/2cb512d3-d3eb-4c6e-ad01-b5ba7935bd85/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.12.4 (Windows-11-10.0.26200-SP0)'
+No body was attached to the request
+[2026-07-09 10:47:37] INFO: Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '51be1365-7091-4a65-aef8-86fdeb744400'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 09 Jul 2026 09:47:36 GMT'
+    'Content-Length': '1964'
+[2026-07-09 10:47:37] INFO: Request URL: 'https://login.microsoftonline.com/2cb512d3-d3eb-4c6e-ad01-b5ba7935bd85/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/x-www-form-urlencoded'
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.12.4 (Windows-11-10.0.26200-SP0)'
+A body is sent with the request
+[2026-07-09 10:47:37] INFO: Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'x-ms-clientdata': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '4557425c-5a08-4796-953a-9bdc7bce2900'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 09 Jul 2026 09:47:36 GMT'
+    'Content-Length': '2285'
+[2026-07-09 10:47:37] INFO: ClientSecretCredential.get_token succeeded
+[2026-07-09 10:47:38] INFO: HTTP Request: GET https://graph.microsoft.com/v1.0//subscribedSkus "HTTP/1.1 200 OK"
+[2026-07-09 10:47:41] INFO: SUCCESS: Exported overall balances to 'license_inventory_summary.csv'
+[2026-07-09 10:47:41] INFO: Scanning all directory accounts for active seat usage metrics...
+[2026-07-09 10:47:41] ERROR: FAILED to process user licensing records: 'function' object has no attribute 'headers'
+[2026-07-09 10:47:41] INFO: License Governance Pipeline Execution Completed.
