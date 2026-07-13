@@ -2,13 +2,13 @@
 
 ![Amdari Project 1 — Entra ID uplift overview](1.png)
 
-## The story (why this project existed)
+## The story 
 
 ![Department security groups and Administrative Units in Entra ID](2.png)
 
-Amdari had already migrated to Microsoft cloud identity (Microsoft Entra ID + Microsoft 365 with P1 licensing), but the day-to-day work of identity administration still looked like "old IT":
+A Financial Company had already migrated to but the day-to-day work of identity administration still looked like "old IT":
 
-> Despite the platform migration, day-to-day identity administration remains manual, performed individually by IT administrators.
+> Despite the platform migration, day-to-day identity administration remained manual, performed individually by IT administrators.
 
 That meant onboarding a single employee could take **2–3 hours**, and the quality of access depended on who handled the request and how busy they were that day.
 
@@ -23,7 +23,7 @@ At the same time, the security posture wasn't keeping up with the platform:
 Management's concerns were very direct:
 > delayed onboarding, inconsistent provisioning, excessive administrative effort, weak privileged-access controls, and limited audit visibility.
 
-So the assignment wasn't to "install Entra." It was to **close gaps** and produce an operational identity system that was:
+So the assignment was to **close gaps** and produce an operational identity system that was:
 - faster
 - standardized
 - secure by default
@@ -31,10 +31,10 @@ So the assignment wasn't to "install Entra." It was to **close gaps** and produc
 
 ---
 
-## What I was asked to deliver (the mission)
+## Delivery Requirements
 ![Conditional Access policies — staged deployment](3.png)
 
-This engagement had measurable objectives (not vibes):
+Measurable Objectives:
 
 1. **Onboard 100 users** across **five departments** within a two-week window.
 2. Reduce provisioning time from **2–3 hours per user** to **under 5 minutes** per user.
@@ -43,7 +43,7 @@ This engagement had measurable objectives (not vibes):
    - attributes + manager
    - group assignment
    - license assignment (P1)
-4. Validate HR CSV input **before** creating anything:
+4. Validate HR CSV input:
    - required fields
    - duplicates
    - email formats
@@ -59,8 +59,7 @@ This engagement had measurable objectives (not vibes):
 7. Implement **license governance**:
    - automated assignment
    - inventory reporting
-   - identify unused licenses
-   - reclamation workflow
+   - identify unused licenses and License Reporting
 8. Produce **audit-ready reports** and map controls to frameworks:
    - Microsoft Zero Trust
    - CIS Controls v8
@@ -72,8 +71,7 @@ This engagement had measurable objectives (not vibes):
 
 ## Step-by-step: what I did and how I did it
 
-### Step 1 — I documented the current-state risks (so we fixed the right problems)
-Before touching configuration, I wrote down the operational and security reality in plain language (and aligned it to what management was already worried about):
+### Step 1 
 
 - Manual account creation: **2–3 hours** per employee
 - Manual group + license assignment: error-prone
@@ -85,16 +83,16 @@ Before touching configuration, I wrote down the operational and security reality
 - No Identity Protection policies (risk signals not acted on)
 - Audit reporting = manual pain
 - No license inventory/utilization/reclamation process
-
-This became the baseline for measuring improvement.
+  
+Baseline for measuring improvement and gave me the information for the architecture creation. 
+![SolutionArchitecture](SolutionArchitecture.png)
 
 ---
 
-### Step 2 — I built a clean IAM foundation (groups, Administrative Units, RBAC)
-To prevent onboarding from becoming a "one-off script," I set up structure first:
+### Step 2 — Clean IAM foundation (groups, Administrative Units, RBAC)
 
 - **Department security groups** (Finance, HR, Operations, IT, Security)
-- **Dynamic groups** where needed (attribute-based membership)
+- **Dynamic groups** with needed (attribute-based membership)
 - **Administrative Units** to delegate administration by department boundary
 - A least-privilege **RBAC model** mapped to job functions (e.g., Helpdesk vs Security Reader vs User Admin)
 
@@ -104,7 +102,7 @@ The goal: once onboarding runs, the identity lands in the correct boundaries aut
 
 ---
 
-### Step 3 — I implemented Conditional Access in a staged rollout (not "big bang")
+### Step 3 — Conditional Access in a staged rollout 
 Because Conditional Access can break access if rushed, I treated it like a deployment:
 - staged policies
 - careful scope
@@ -123,7 +121,7 @@ This directly addressed:
 
 ---
 
-### Step 4 — I configured Identity Protection (risk-based detection + remediation)
+### Step 4 — Configuration of Identity Protection (risk-based detection + remediation)
 The project required more than "MFA everywhere." It required detection and response:
 
 - enabled **user risk** and **sign-in risk** policies
@@ -138,10 +136,8 @@ This directly addressed:
 ![Python + Microsoft Graph onboarding automation run](7.png)
 ---
 
-### Step 5 — I removed standing privilege using PIM + Just-In-Time access
-One of the most important security outcomes: **no always-on power accounts.**
+### Step 5 — Removed standing privilege using PIM + Just-In-Time access
 
-So I:
 - converted privileged roles to **PIM eligible assignments**
 - implemented **Just-In-Time activation** with:
   - time-bound access (default 1 hour, max 2 hours)
@@ -156,10 +152,10 @@ Outcome: privileged access became **governed and auditable**, not assumed.
 
 ---
 
-### Step 6 — I built the onboarding automation (Python + Microsoft Graph)
+### Step 6 — Onboarding automation (Python + Microsoft Graph)
 This is the engine that solved the "2–3 hours per employee" pain.
 
-The automation flow was designed like a production system:
+Automation flow
 
 1. **Input**: HR-provided CSV
 2. **Pre-flight validation**:
@@ -187,7 +183,7 @@ This directly addressed:
 
 ---
 
-### Step 7 — I added license governance (inventory + reclaim)
+### Step 7 — License Governance (inventory + reclaim)
 Licenses are both a cost problem and a governance problem. I implemented a model for:
 
 - automated license assignment (baseline)
@@ -200,15 +196,14 @@ Licenses are both a cost problem and a governance problem. I implemented a model
 
 ---
 
-### Step 8 — I closed a governance gap: added an Owner account (accountability + continuity)
+### Step 8 — Closed Governance gap: added an Owner account (accountability + continuity)
 During implementation I identified an operational risk: **lack of clear ownership** can make troubleshooting and change control messy.
 ![License inventory and reclamation reporting](9.png)
 
 
 So I took an explicit governance step:
 
-> Owners can manage membership and settings; having none is a governance risk and makes troubleshooting harder. I added my Admin Account as an Owner.
-
+> Owners can manage membership and settings; having none is a governance risk and makes troubleshooting harder. 
 Why that mattered:
 - **Governance & audit**: accountability for changes
 - **Operational continuity**: no single-admin dependency
